@@ -1,0 +1,220 @@
+.filter {
+  padding: 8px 0 10px;
+  .header__search {
+    margin-bottom: 24px;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 20px;
+    color: $text;
+    &:hover {
+      color: $text;
+    }
+  }
+  &__circles {
+    width: 8px;
+    height: 8px;
+    margin: 0 21px 0 11px;
+    border-radius: 100%;
+    background-color: $purple;
+    position: relative;
+    transition: 0.3s;
+    &:after {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: $purple;
+      position: absolute;
+      top: 0;
+      right: -11px;
+      transition: 0.3s;
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: $purple;
+      position: absolute;
+      top: 0;
+      left: -11px;
+      transition: 0.3s;
+    }
+  }
+  &__row {
+    margin-bottom: 12px;
+  }
+  &__title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -18px;
+    margin-left: -17px;
+    > * {
+      margin-top: 18px;
+      margin-left: 17px;
+    }
+  }
+  &__category {
+    font-size: 12px;
+    input {
+      display: none;
+      &:checked {
+        ~ label {
+          color: $purple;
+        }
+      }
+    }
+    label {
+      display: block;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  &__names {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -4px;
+    margin-left: -3px;
+    > * {
+      margin-top: 4px;
+      margin-left: 3px;
+    }
+  }
+  &__name {
+    font-size: 12px;
+    input {
+      display: none;
+      &:checked {
+        ~ label {
+          border-color: $purple;
+          color: $purple;
+        }
+      }
+    }
+    label {
+      display: block;
+      padding: 7px;
+      background: #FFFFFF;
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.08);
+      border-radius: 5px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      user-select: none;
+    }
+  }
+  &__colors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -8px;
+    margin-left: -15px;
+    > * {
+      margin-top: 8px;
+      margin-left: 15px;
+    }
+  }
+  &__color {
+    input {
+      display: none;
+      &:checked {
+        ~label {
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 29px;
+      height: 29px;
+      border-radius: 100%;
+      cursor: pointer;
+      &:after {
+        content: '';
+        display: block;
+        width: 23px;
+        height: 23px;
+        border-radius: 100%;
+        border: 2px solid #fff;
+        opacity: 0;
+        transition: 0.1s;
+      }
+    }
+    &--green {
+      label {
+        background-color: #4DB45E;
+      }
+    }
+    &--red {
+      label {
+        background-color: #EB001B;
+      }
+    }
+    &--purple {
+      label {
+        background-color: #C12C99;
+      }
+    }
+    &--pink {
+      label {
+        background-color: #FFD4DE;
+      }
+    }
+    &--orange {
+      label {
+        background-color: #FFB801;
+      }
+    }
+    &--yellow {
+      label {
+        background-color: #E5E861;
+      }
+    }
+    &--beige {
+      label {
+        background-color: #FADFAB;
+      }
+    }
+    &--blue {
+      label {
+        background-color: #088CCB;
+      }
+    }
+    &--black {
+      label {
+        background-color: #131313;
+      }
+    }
+    &--white {
+      label {
+        background-color: #FFFFFF;
+        border: 1px solid #DFDFDF;
+        &:after {
+          border-color: #DFDFDF;
+        }
+      }
+    }
+    &--multicolor {
+      label {
+        background: conic-gradient(from 180deg at 50% 50%, #FF0000 0deg, #F3CC00 56.25deg, #7EF36B 116.25deg, #178BF7 206.25deg, #FB36DB 288.75deg, rgba(220, 0, 79, 0) 360deg);
+      }
+    }
+    &--multicolor-light {
+      label {
+        background: conic-gradient(from 180deg at 50% 50%, #FAB9AB 0deg, #FAE4AB 52.5deg, #E5FAAB 108.75deg, #ABFAE7 210deg, #ACABFA 286.87deg, rgba(250, 171, 185, 0) 360deg);
+      }
+    }
+  }
+}

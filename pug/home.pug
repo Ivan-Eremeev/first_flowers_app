@@ -1,0 +1,43 @@
+extends blocks/base.pug
+
+block title 
+	title Главная
+
+block content
+
+	include blocks/card.pug
+
+	.page
+
+		include blocks/header.pug
+		
+		.content
+			
+			// products
+			section.products
+				.container 
+
+					a(href="#").filter__btn
+						.filter__circles 
+						| Фильтр
+
+					.row.gy-3
+						.col-6
+							+card('img/product.jpg')
+						.col-6
+							+card('img/product.jpg')
+						.col-6
+							+card('img/product.jpg')
+						.col-6
+							+card('img/product.jpg')
+						.col-6
+							+card('img/product.jpg')
+						.col-6
+							+card('img/product.jpg')
+						.col-6
+							+card('img/product.jpg')
+						.col-6
+							+card('img/product.jpg')
+			//	/products
+			
+		include blocks/footer.pug

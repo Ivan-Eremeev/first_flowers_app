@@ -1,0 +1,35 @@
+// header
+header.header#header
+
+	.header__top 
+
+		.container.d-flex.align-items-center.justify-content-between.h-100
+
+			a(href="#").header__hamburger
+				img(src="img/hamburger.svg", alt="")
+
+			.header__search 
+				input#search(type="text")
+				label(for="search").header__search-placeholder 
+					img(src="img/search.svg", alt="")
+					| Поиск по товарам
+			
+			a(href="#").header__icon 
+				img(src="img/phone.svg", alt="")
+
+	.header__bottom 
+
+		.container
+		
+			nav.header__menu 
+				ul 
+					li 
+						a(href="#") Классика
+					li 
+						a(href="#") Авторские
+					li 
+						a(href="#") Букеты
+					li 
+						a(href="#") Розы 
+
+// /header

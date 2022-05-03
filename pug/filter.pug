@@ -1,0 +1,128 @@
+extends blocks/base.pug
+
+block title 
+	title Фильтр
+
+block content
+
+	include blocks/card.pug
+
+	.page
+
+		include blocks/header_inner.pug
+		
+		.content
+						
+			// filter
+			.filter
+				.container
+					.header__search.header__search--left
+						input#search(type="text")
+						label(for="search").header__search-placeholder.header__search-placeholder--left
+							img(src="img/search.svg", alt="")
+							| Поиск по товарам
+					.filter__row 
+						.filter__title Раздел
+						.filter__names
+							.filter__name
+								input#category_0(type="radio", name="category" checked)
+								label(for="category_0") Монобукеты
+							.filter__name
+								input#category_1(type="radio", name="category")
+								label(for="category_1") Авторские
+							.filter__name
+								input#category_2(type="radio", name="category")
+								label(for="category_2") Коробки
+							.filter__name
+								input#category_3(type="radio", name="category")
+								label(for="category_3") Корзины
+					.filter__row 
+						.filter__title Цветок
+						.filter__names 
+							.filter__name 
+								input#name_0(type="radio", name="name")
+								label(for="name_0") Пионы
+							.filter__name 
+								input#name_1(type="radio", name="name")
+								label(for="name_1") Розы
+							.filter__name 
+								input#name_2(type="radio", name="name" checked)
+								label(for="name_2") Тюльпаны
+							.filter__name 
+								input#name_3(type="radio", name="name")
+								label(for="name_3") Пионовидные розы
+							.filter__name 
+								input#name_4(type="radio", name="name")
+								label(for="name_4") Орхидеи
+							.filter__name 
+								input#name_5(type="radio", name="name")
+								label(for="name_5") Пионы
+							.filter__name 
+								input#name_6(type="radio", name="name")
+								label(for="name_6") Розы
+							.filter__name 
+								input#name_7(type="radio", name="name")
+								label(for="name_7") Тюльпаны
+							.filter__name 
+								input#name_8(type="radio", name="name")
+								label(for="name_8") Пионовидные розы
+							.filter__name 
+								input#name_9(type="radio", name="name")
+								label(for="name_9") Орхидеи
+							.filter__name 
+								input#name_10(type="radio", name="name")
+								label(for="name_10") Пионы
+							.filter__name 
+								input#name_11(type="radio", name="name")
+								label(for="name_11") Розы
+							.filter__name 
+								input#name_12(type="radio", name="name")
+								label(for="name_12") Тюльпаны
+							.filter__name 
+								input#name_13(type="radio", name="name")
+								label(for="name_13") Пионовидные розы
+							.filter__name 
+								input#name_14(type="radio", name="name")
+								label(for="name_14") Орхидеи
+					.filter__row 
+						.filter__title Цвет букета
+						.filter__colors
+							.filter__color.filter__color--green 
+								input#color_0(type="radio", name="color" checked)
+								label(for="color_0") 
+							.filter__color.filter__color--red 
+								input#color_1(type="radio", name="color")
+								label(for="color_1") 
+							.filter__color.filter__color--purple 
+								input#color_2(type="radio", name="color")
+								label(for="color_2") 
+							.filter__color.filter__color--pink 
+								input#color_3(type="radio", name="color")
+								label(for="color_3") 
+							.filter__color.filter__color--orange 
+								input#color_4(type="radio", name="color")
+								label(for="color_4") 
+							.filter__color.filter__color--yellow 
+								input#color_5(type="radio", name="color")
+								label(for="color_5") 
+							.filter__color.filter__color--beige
+								input#color_6(type="radio", name="color")
+								label(for="color_6") 
+							.filter__color.filter__color--blue 
+								input#color_7(type="radio", name="color")
+								label(for="color_7") 
+							.filter__color.filter__color--black 
+								input#color_8(type="radio", name="color")
+								label(for="color_8") 
+							.filter__color.filter__color--white 
+								input#color_9(type="radio", name="color")
+								label(for="color_9") 
+							.filter__color.filter__color--multicolor 
+								input#color_10(type="radio", name="color")
+								label(for="color_10") 
+							.filter__color.filter__color--multicolor-light
+								input#color_11(type="radio", name="color")
+								label(for="color_11") 
+			// /filter
+
+		include blocks/footer.pug

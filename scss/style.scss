@@ -1,0 +1,102 @@
+@import 'mixins';
+
+
+// @import 'mixingrid';
+
+// Переменные для кастомизации Mixingrid
+// $columns: 12; // Колличество колонок
+// $max-width: 1200px; // Максимальная ширина контейнера
+// $gutter: 15px; // Расстояние между колонками
+// $offset: 30px; // Поля контейнера
+// $offset-sm: 15px; // Поля контейнера на мобилке
+// // Брэйкпоинты
+// $break_xl: 1400px;
+// $break_lg: 1200px;
+// $break_md: 1050px;
+// $break_sm: 769px;
+// $break_xs: 500px;
+
+// Переменные для кастомизации Bootstrap 5
+$grid-gutter-width: 20px; // Отступы между колонками
+$grid-columns: 12; // Колличество колонок
+$grid-breakpoints: ( // Брейкпоинты
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px) !default;
+$container-max-widths: ( // Максимальная ширина контейнера
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1440px) !default;
+
+$gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+
+$gutters: (0: 0,
+  1: $grid-gutter-width * 0.25,
+  2: $grid-gutter-width * 0.5,
+  3: $grid-gutter-width * 1,
+  4: $grid-gutter-width * 1.5,
+  5: $grid-gutter-width * 2,
+);
+$spacers: (0: 0,
+  1: $grid-gutter-width * 0.25,
+  2: $grid-gutter-width * 0.5,
+  3: $grid-gutter-width * 1,
+  4: $grid-gutter-width * 1.5,
+  5: $grid-gutter-width * 2,
+);
+
+@import 'bootstrap/bootstrap'; // Подключение бутстрап
+
+@include reset(); // Сброс стилей
+
+// Шрифты
+@include font-face("SF Pro Display", "../fonts/SFProDisplay/SFProDisplay-Thin", 200, normal);
+@include font-face("SF Pro Display", "../fonts/SFProDisplay/SFProDisplay-Light", 300, normal);
+@include font-face("SF Pro Display", "../fonts/SFProDisplay/SFProDisplay-Regular", normal, normal);
+@include font-face("SF Pro Display", "../fonts/SFProDisplay/SFProDisplay-Medium", 500, normal);
+@include font-face("SF Pro Display", "../fonts/SFProDisplay/SFProDisplay-Semibold", 600, normal);
+
+// Цвета
+$text: #3C3A3A;
+$prompt: #858585;
+$white: #fff;
+$pink: #FF3366;
+$green: #219653;
+$light_grey: #E5E5E5;
+$purple: #C5528B;
+$light_pink: #FFD4DE;
+
+$box_shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$box_shadow_hover: 0px 8px 10px rgba(0, 0, 0, 0.5);
+
+
+// Подключение файлов
+@import 'blocks/settings';
+// @import 'blocks/tabs-radio';
+// @import 'blocks/input';
+// @import 'blocks/select';
+// @import 'blocks/air-datepicker';
+// @import 'hamburgers/hamburgers';
+// @import 'blocks/menu';
+@import 'blocks/header';
+// @import 'blocks/slider';
+// @import 'blocks/items';
+@import 'blocks/products';
+@import 'blocks/card';
+@import 'blocks/footer';
+// @import 'blocks/social';
+// @import 'blocks/breadcrumbs';
+// @import 'blocks/product';
+// @import 'blocks/search-result';
+// @import 'blocks/order';
+// @import 'blocks/approval';
+@import 'blocks/filter';
+// @import 'blocks/accordion';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
+// @import 'blocks/tabs';
