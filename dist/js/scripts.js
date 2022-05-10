@@ -84,31 +84,31 @@ $(document).ready(function () {
 	// stikyMenu();
 
 	// Изменение количества товара (плюс минус)
-	// function counter(block) {
-	// 	const counter = document.querySelector(block);
-	// 	if (counter) {
-	// 		const minus = counter.querySelector('.counter-minus');
-	// 		const plus = counter.querySelector('.counter-plus');
-	// 		const inputWrap = counter.querySelector('.counter-input');
-	// 		const input = inputWrap.querySelector('input');
-	// 		plus.addEventListener('click', () => {
-	// 			if (Number(input.value) < 999) {
-	// 				input.value = Number(input.value) + 1;
-	// 			}
-	// 		})
-	// 		minus.addEventListener('click', () => {
-	// 			if (Number(input.value) > 1) {
-	// 				input.value = Number(input.value) - 1;
-	// 			}
-	// 		})
-	// 		input.addEventListener('blur', () => {
-	// 			if (input.value == '' || input.value == 0) {
-	// 				input.value = 1;
-	// 			}
-	// 		})
-	// 	}
-	// }
-	// counter('#counter');
+	function counter(block) {
+		const counter = document.querySelector(block);
+		if (counter) {
+			const minus = counter.querySelector('.counter-minus');
+			const plus = counter.querySelector('.counter-plus');
+			const inputWrap = counter.querySelector('.counter-input');
+			const input = inputWrap.querySelector('input');
+			plus.addEventListener('click', () => {
+				if (Number(input.value) < 999) {
+					input.value = Number(input.value) + 1;
+				}
+			})
+			minus.addEventListener('click', () => {
+				if (Number(input.value) > 1) {
+					input.value = Number(input.value) - 1;
+				}
+			})
+			input.addEventListener('blur', () => {
+				if (input.value == '' || input.value == 0) {
+					input.value = 1;
+				}
+			})
+		}
+	}
+	counter('#counter');
 
 	// Выпадайка по состоянию input (checked)
 	function showDropInputChecked(input) {

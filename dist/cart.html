@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Навигация по страницам</title>
+		<title>Корзина</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -14,42 +14,51 @@
 	</head>
 	<body>
 		<div class="page">
-			<!-- header-->
-			<header class="header" id="header">
-				<div class="header__top"> 
-					<div class="container d-flex align-items-center justify-content-between h-100"><a class="header__hamburger" href="#"><img src="img/hamburger.svg" alt=""></a>
-						<div class="header__search"> 
-							<input id="search" type="text">
-							<label class="header__search-placeholder" for="search"> <img src="img/search.svg" alt="">Поиск по товарам</label>
-						</div><a class="header__icon" href="#"> <img src="img/phone.svg" alt=""></a>
-					</div>
-				</div>
-				<div class="header__bottom"> 
+						<!-- header-->
+						<header class="header" id="header">
+							<div class="header__top"> 
+								<div class="container d-flex align-items-center h-100"><a class="header__hamburger" href="#"><img src="img/arrow.svg" alt=""></a>
+									<div class="header__title">Корзина</div><a class="header__icon" href="#"> <img src="img/basked.svg" alt=""></a>
+								</div>
+							</div>
+						</header>
+						<!-- /header-->
+			<div class="content content--df">
+				<!-- cart-->
+				<form class="cart" action="#">
 					<div class="container">
-						<nav class="header__menu"> 
-							<ul> 
-								<li> <a href="#">Классика</a></li>
-								<li> <a href="#">Авторские</a></li>
-								<li> <a href="#">Букеты</a></li>
-								<li> <a href="#">Розы </a></li>
-							</ul>
-						</nav>
+						<div class="cart__cards">
+							<div class="cart__cards-row">
+								<div class="cart__card"> 
+									<div class="cart__img"> <img src="img/product.jpg" alt=""></div>
+									<div class="cart__content"> 
+										<div class="cart__title">БУКЕТ ИЗ ПИОНОВ</div>
+										<div class="cart__price">3500₽</div>
+										<div class="cart__counter-row"> <span>Кол-во:</span>
+											<div class="cart__counter" id="counter">
+												<div class="cart__counter-btn counter-minus">-</div>
+												<div class="cart__counter-input counter-input">
+													<input type="text" value="1" maxlength="3">
+												</div>
+												<div class="cart__counter-btn counter-plus">+</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart__result"> 
+							<div class="cart__result-content"> 
+								<div class="cart__result-price">Итого:<span>3500₽</span></div>
+								<div class="cart__result-text">Доставка по Москве бесплатно</div>
+							</div>
+							<div class="cart__result-btn"> 
+								<button class="btn btn--purple btn--medium">КУПИТЬ</button>
+							</div>
+						</div>
 					</div>
-				</div>
-			</header>
-			<!-- /header-->
-			<div class="content">
-				<div class="navPage"> 
-					<div class="container">
-						<h1>Навигация по страницам</h1>
-						<ul> 
-							<li> <a href="home.html">Главная</a></li>
-							<li> <a href="filter.html">Фильтр</a></li>
-							<li><a href="product.html">Страница товара</a></li>
-							<li> <a href="cart.html">Корзина</a></li>
-						</ul>
-					</div>
-				</div>
+				</form>
+				<!--	/cart-->
 			</div>
 			<!-- footer-->
 			<footer class="footer"> 

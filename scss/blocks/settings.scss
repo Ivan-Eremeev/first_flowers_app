@@ -90,6 +90,9 @@ body {
 .content {
   flex-grow: 1;
   padding-bottom: 60px;
+  &--df {
+    display: flex;
+  }
 }
 
 .btn {
@@ -103,7 +106,6 @@ body {
   cursor: pointer;
   user-select: none;
   transition: 0.2s;
-  font-size: 18px;
   &--white {
     background-color: $white;
     color: $purple;
@@ -140,12 +142,13 @@ body {
   }
 
   &--medium {
-    padding: 5px 16px;
-    font-size: 22px;
+    padding: 14px 30px;
+    font-size: 16px;
   }
 
   &--large {
-    padding: 14px 78px;
+    font-size: 18px;
+    padding: 17px 30px;
   }
 }
 

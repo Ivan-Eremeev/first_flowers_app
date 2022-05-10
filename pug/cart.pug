@@ -1,0 +1,46 @@
+extends blocks/base.pug
+
+block title 
+	title Корзина
+
+block content
+
+	.page
+
+		include blocks/header_inner.pug
+		+header_inner('Корзина', 'img/basked.svg')
+		
+		.content.content--df
+			
+			// cart
+			form(action="#").cart
+				.container
+
+					.cart__cards
+
+						.cart__cards-row
+
+							.cart__card 
+								.cart__img 
+									img(src="img/product.jpg", alt="")
+								.cart__content 
+									.cart__title БУКЕТ ИЗ ПИОНОВ
+									.cart__price 3500₽
+									.cart__counter-row 
+										span Кол-во:
+										.cart__counter#counter
+											.cart__counter-btn.counter-minus -
+											.cart__counter-input.counter-input
+												input(type="text" value="1" maxlength="3")
+											.cart__counter-btn.counter-plus +
+
+					.cart__result 
+						.cart__result-content 
+							.cart__result-price Итого:
+								span 3500₽
+							.cart__result-text Доставка по Москве бесплатно
+						.cart__result-btn 
+							button.btn.btn--purple.btn--medium КУПИТЬ
+			//	/cart
+			
+		include blocks/footer.pug
