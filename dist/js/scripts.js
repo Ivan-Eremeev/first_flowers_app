@@ -163,13 +163,11 @@ $(document).ready(function () {
 	let minDate = new Date();
 	new AirDatepicker('#airDatepicker', {
 		isMobile: true,
+		autoClose: true,
 		navTitles: {
 			days: 'MMMM yyyy'
 		},
 		minDate,
-		onSelect({ date, formattedDate, datepicker }) {
-			datepicker.hide();
-		}
 	})
 
 	// Formstyler Select

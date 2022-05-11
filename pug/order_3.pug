@@ -1,0 +1,56 @@
+extends blocks/base.pug
+
+block title 
+	title Оформление заказа (шаг 3)
+
+block content
+
+	.page
+
+		include blocks/header_inner.pug
+		+header_inner('Оформление заказа')
+		
+		.content
+			
+			// order
+			.order
+				.container
+					form(action="#") 
+
+						.order__pays 
+							.order__subtitle Выберите способ оплаты
+							.order__pay
+								input#visa(type="radio" name="pay")
+								label(for="visa") 
+									img(src="img/visa.svg", alt="")
+									span Visa
+									span.order__pay-radio
+							.order__pay
+								input#mastercard(type="radio" name="pay")
+								label(for="mastercard") 
+									img(src="img/mastercard.svg", alt="")
+									span Mastercard
+									span.order__pay-radio
+							.order__pay
+								input#mir(type="radio" name="pay")
+								label(for="mir") 
+									img(src="img/mir.svg", alt="")
+									span Мир
+									span.order__pay-radio
+
+						.order__subtitle.order__purple Ввести промокод:
+						.input 
+							.input__input 
+								input(type="text") 
+						.order__inputs-btn
+							.btn.btn--small.btn--black ПРИМЕНИТЬ
+
+						.row.mt-5
+							.col-12
+								.order__progress 
+									.order__progress-step 3/3
+									.order__progress-line 
+										span(style="width: 100%")
+			//	/order
+			
+		include blocks/footer.pug
