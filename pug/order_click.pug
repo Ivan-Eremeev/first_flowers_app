@@ -1,0 +1,97 @@
+extends blocks/base.pug
+
+block title 
+	title Оформление заказа (шаг 1)
+
+block content
+
+	.page
+
+		include blocks/header_inner.pug
+		+header_inner('Купить в 1 клик')
+		
+		.content
+			
+			// order
+			.order
+				.container
+					form(action="#") 
+						.order__tabs.js-tabs-radio
+							.order__triggers.js-tabs-radio_triggers
+								.order__trigger 
+									input#delivery_0(type="radio" name="delivery" data-trigger="tab_0" checked)
+									label(for="delivery_0") ДОСТАВИТЬ МНЕ
+								.order__trigger 
+									input#delivery_1(type="radio" name="delivery" data-trigger="tab_1")
+									label(for="delivery_1") ДОСТАВИТЬ В ПОДАРОК
+							.order__body
+								.order__tabblock.js-tabs-radio_tab.open(data-tab="tab_0")
+									.row.gy-2
+										.col-12
+											.input 
+												.input__label Имя 
+													span &#42;
+												.input__input 
+													input(type="text") 
+										.col-12
+											.input 
+												.input__label Телефон получателя  
+													span &#42;
+												.input__input 
+													input(type="text") 
+										.col-12
+											.input 
+												.input__label Дополнительная информация: 
+												.input__input 
+													textarea
+								.order__tabblock.js-tabs-radio_tab(data-tab="tab_1")
+									.order__arrange
+										.approval
+											input#arrange.approval__input(type="checkbox")
+											label.approval__label(for="arrange")
+												span.approval__checkbox 
+												span.approval__text Согласовать с получателем
+									.row.gy-2
+										.col-12
+											.input 
+												.input__label Имя 
+													span &#42;
+												.input__input 
+													input(type="text") 
+										.col-12
+											.input 
+												.input__label Телефон получателя 
+													span &#42;
+												.input__input 
+													input(type="text") 
+										.col-12
+											.input 
+												.input__label Дополнительная информация: 
+												.input__input 
+													textarea
+						.order__postcard 
+							.approval
+								input#approval.approval__input(type="checkbox" data-drop="postcard").js-drop-input
+								label.approval__label(for="approval")
+									span.approval__checkbox 
+									span.approval__text.approval__text--small Добавить в заказ открытку 
+										span (бесплатно)
+							.order__postcard-drop#postcard
+								.input 
+									.input__label Текст открытки:
+									.input__input 
+										input(type="text")
+								.order__postcard-ps Символов: 0 из 100
+						.row.mt-5
+							.col-6
+								.order__progress 
+									.order__progress-step 1/3
+									.order__progress-line 
+										span(style="width: 33.33%")
+							.col-6 
+								.order__buttons 
+									a(href="#").btn.btn--small.btn--purple ДАЛЕЕ
+											
+			//	/order
+			
+		include blocks/footer.pug

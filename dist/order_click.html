@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="UTF-8">
-		<title>Навигация по страницам</title>
+		<title>Оформление заказа (шаг 1)</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="keywords" content="">
 		<meta name="description" content="">
@@ -14,47 +14,126 @@
 	</head>
 	<body>
 		<div class="page">
-			<!-- header-->
-			<header class="header" id="header">
-				<div class="header__top"> 
-					<div class="container d-flex align-items-center justify-content-between h-100"><a class="header__hamburger" href="#"><img src="img/hamburger.svg" alt=""></a>
-						<div class="header__search"> 
-							<input id="search" type="text">
-							<label class="header__search-placeholder" for="search"> <img src="img/search.svg" alt="">Поиск по товарам</label>
-						</div><a class="header__icon" href="#"> <img src="img/phone.svg" alt=""></a>
-					</div>
-				</div>
-				<div class="header__bottom"> 
-					<div class="container">
-						<nav class="header__menu"> 
-							<ul> 
-								<li> <a href="#">Классика</a></li>
-								<li> <a href="#">Авторские</a></li>
-								<li> <a href="#">Букеты</a></li>
-								<li> <a href="#">Розы </a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>
-			<!-- /header-->
+						<!-- header-->
+						<header class="header" id="header">
+							<div class="header__top"> 
+								<div class="container d-flex align-items-center h-100"><a class="header__hamburger" href="#"><img src="img/arrow.svg" alt=""></a>
+									<div class="header__title">Купить в 1 клик</div>
+								</div>
+							</div>
+						</header>
+						<!-- /header-->
 			<div class="content">
-				<div class="navPage"> 
+				<!-- order-->
+				<div class="order">
 					<div class="container">
-						<h1>Навигация по страницам</h1>
-						<ul> 
-							<li> <a href="home.html">Главная</a></li>
-							<li> <a href="filter.html">Фильтр</a></li>
-							<li><a href="product.html">Страница товара</a></li>
-							<li> <a href="cart.html">Корзина</a></li>
-							<li> <a href="order_1.html">Оформление заказа (шаг 1)</a></li>
-							<li> <a href="order_2.html">Оформление заказа (шаг 2)</a></li>
-							<li> <a href="order_3.html">Оформление заказа (шаг 3)</a></li>
-							<li> <a href="order_4.html">Оформление заказа (шаг 4)</a></li>
-							<li> <a href="order_click.html">Купить в один клик</a></li>
-						</ul>
+						<form action="#"> 
+							<div class="order__tabs js-tabs-radio">
+								<div class="order__triggers js-tabs-radio_triggers">
+									<div class="order__trigger"> 
+										<input id="delivery_0" type="radio" name="delivery" data-trigger="tab_0" checked>
+										<label for="delivery_0">ДОСТАВИТЬ МНЕ</label>
+									</div>
+									<div class="order__trigger"> 
+										<input id="delivery_1" type="radio" name="delivery" data-trigger="tab_1">
+										<label for="delivery_1">ДОСТАВИТЬ В ПОДАРОК</label>
+									</div>
+								</div>
+								<div class="order__body">
+									<div class="order__tabblock js-tabs-radio_tab open" data-tab="tab_0">
+										<div class="row gy-2">
+											<div class="col-12">
+												<div class="input"> 
+													<div class="input__label">Имя <span>&#42;</span></div>
+													<div class="input__input"> 
+														<input type="text">
+													</div>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="input"> 
+													<div class="input__label">Телефон получателя  <span>&#42;</span></div>
+													<div class="input__input"> 
+														<input type="text">
+													</div>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="input"> 
+													<div class="input__label">Дополнительная информация: </div>
+													<div class="input__input"> 
+														<textarea></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="order__tabblock js-tabs-radio_tab" data-tab="tab_1">
+										<div class="order__arrange">
+											<div class="approval">
+												<input class="approval__input" id="arrange" type="checkbox">
+												<label class="approval__label" for="arrange"><span class="approval__checkbox"> </span><span class="approval__text">Согласовать с получателем</span></label>
+											</div>
+										</div>
+										<div class="row gy-2">
+											<div class="col-12">
+												<div class="input"> 
+													<div class="input__label">Имя <span>&#42;</span></div>
+													<div class="input__input"> 
+														<input type="text">
+													</div>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="input"> 
+													<div class="input__label">Телефон получателя <span>&#42;</span></div>
+													<div class="input__input"> 
+														<input type="text">
+													</div>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="input"> 
+													<div class="input__label">Дополнительная информация: </div>
+													<div class="input__input"> 
+														<textarea></textarea>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="order__postcard"> 
+								<div class="approval">
+									<input class="approval__input js-drop-input" id="approval" type="checkbox" data-drop="postcard">
+									<label class="approval__label" for="approval"><span class="approval__checkbox"> </span><span class="approval__text approval__text--small">Добавить в заказ открытку <span>(бесплатно)</span></span></label>
+								</div>
+								<div class="order__postcard-drop" id="postcard">
+									<div class="input"> 
+										<div class="input__label">Текст открытки:</div>
+										<div class="input__input"> 
+											<input type="text">
+										</div>
+									</div>
+									<div class="order__postcard-ps">Символов: 0 из 100</div>
+								</div>
+							</div>
+							<div class="row mt-5">
+								<div class="col-6">
+									<div class="order__progress"> 
+										<div class="order__progress-step">1/3</div>
+										<div class="order__progress-line"> <span style="width: 33.33%"></span></div>
+									</div>
+								</div>
+								<div class="col-6"> 
+									<div class="order__buttons"> <a class="btn btn--small btn--purple" href="#">ДАЛЕЕ</a></div>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
+				<!--	/order-->
 			</div>
 			<!-- footer-->
 			<footer class="footer"> 
