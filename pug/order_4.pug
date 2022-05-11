@@ -1,0 +1,29 @@
+extends blocks/base.pug
+
+block title 
+	title Оформление заказа (шаг 4)
+
+block content
+
+	.page
+
+		include blocks/header_inner.pug
+		+header_inner('Ваш заказ')
+		
+		.content
+			
+			// order
+			.order
+				.container
+					form(action="#") 
+						.order__title.order__purple Поздравляем!
+						.order__text 
+							p Заказ оформлен. Ваш номер заказа 
+								span 453885. 
+							p Сохраните его, он необходим для получения <br>информации о заказе.
+						.row.mt-5
+							.col-12 
+								a(href="#").btn.btn--small.btn--white НА ГЛАВНУЮ
+			//	/order
+			
+		include blocks/footer.pug

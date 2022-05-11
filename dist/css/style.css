@@ -8299,6 +8299,10 @@ body.lock {
 .order {
   padding: 20px 0;
 }
+.order__title {
+  font-size: 20px;
+  margin-bottom: 9px;
+}
 .order__tabs {
   margin-bottom: 9px;
 }
@@ -8486,6 +8490,13 @@ body.lock {
 }
 .order__inputs-btn {
   margin-top: 9px;
+}
+.order__text {
+  font-size: 14px;
+}
+.order__text span {
+  font-weight: 600;
+  color: #C5528B;
 }
 
 .approval__input {
