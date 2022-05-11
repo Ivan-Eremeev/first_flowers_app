@@ -3852,42 +3852,6 @@ body.lock {
   margin-bottom: 8px;
 }
 
-.filter__categories {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-top: -18px;
-  margin-left: -17px;
-}
-
-.filter__categories > * {
-  margin-top: 18px;
-  margin-left: 17px;
-}
-
-.filter__category {
-  font-size: 12px;
-}
-
-.filter__category input {
-  display: none;
-}
-
-.filter__category input:checked ~ label {
-  color: #C5528B;
-}
-
-.filter__category label {
-  display: block;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .filter__names {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3929,6 +3893,7 @@ body.lock {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  white-space: nowrap;
 }
 
 .filter__colors {

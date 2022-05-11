@@ -54,32 +54,6 @@
     font-size: 16px;
     margin-bottom: 8px;
   }
-  &__categories {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -18px;
-    margin-left: -17px;
-    > * {
-      margin-top: 18px;
-      margin-left: 17px;
-    }
-  }
-  &__category {
-    font-size: 12px;
-    input {
-      display: none;
-      &:checked {
-        ~ label {
-          color: $purple;
-        }
-      }
-    }
-    label {
-      display: block;
-      cursor: pointer;
-      user-select: none;
-    }
-  }
   &__names {
     display: flex;
     flex-wrap: wrap;
@@ -110,6 +84,7 @@
       border: 1px solid transparent;
       cursor: pointer;
       user-select: none;
+      white-space: nowrap;
     }
   }
   &__colors {
