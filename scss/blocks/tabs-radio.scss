@@ -1,0 +1,11 @@
+.js-tabs-radio {
+  &_triggers {
+
+  }
+  &_tab {
+    display: none;
+    &.open {
+      display: block;
+    }
+  }
+}

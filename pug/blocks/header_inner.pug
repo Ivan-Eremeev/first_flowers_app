@@ -10,8 +10,9 @@ mixin header_inner(title, icon)
 					img(src="img/arrow.svg", alt="")
 
 				.header__title= title
-				
-				a(href="#").header__icon 
-					img(src= icon, alt="")
+
+				if(icon)	
+					a(href="#").header__icon 
+						img(src= icon, alt="")
 
 	// /header

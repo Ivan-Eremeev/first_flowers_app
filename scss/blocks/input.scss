@@ -1,0 +1,38 @@
+.input {
+  &__label {
+    font-size: 16px;
+    color: #818C92;
+    margin-bottom: 12px;
+    span {
+      color: $purple;
+    }
+  }
+  &__input {
+    position: relative;
+    input {
+      width: 100%;
+      height: 47px;
+      padding: 0 20px;
+      border-radius: 15px;
+      background-color: $light_grey;
+      border: none;
+      outline: none;
+    }
+    textarea {
+      width: 100%;
+      height: 64px;
+      padding: 15px 20px;
+      border-radius: 15px;
+      background-color: $light_grey;
+      border: none;
+      outline: none;
+      resize: none;
+    }
+  }
+  &__calendar {
+    position: absolute;
+    top: 50%;
+    right: 6px;
+    transform: translate(0,-50%);
+  }
+}
