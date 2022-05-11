@@ -202,7 +202,7 @@ kbd,
 samp {
   font-family: var(--bs-font-monospace);
   font-size: 1em;
-  direction: ltr ;
+  direction: ltr;
   unicode-bidi: bidi-override;
 }
 
