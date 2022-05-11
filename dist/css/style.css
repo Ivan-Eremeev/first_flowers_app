@@ -7603,6 +7603,177 @@ body.lock {
   transform: translate(0, -50%);
 }
 
+.select__label {
+  font-size: 16px;
+  color: #818C92;
+  margin-bottom: 12px;
+}
+.select__label span {
+  color: #C5528B;
+}
+.select__select .jq-selectbox {
+  width: 100%;
+}
+.select__select .jq-selectbox__select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 47px;
+  padding: 0 45px 0 20px;
+  background: #E5E5E5;
+  border: none;
+  border-radius: 15px;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 18px;
+  color: #3C3A3A;
+}
+.select__select .jq-selectbox__select-text {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 16px;
+}
+.select__select .jq-selectbox__trigger {
+  border: none;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.select__select .jq-selectbox__trigger-arrow {
+  border-top: 8px solid #3C3A3A;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.select__select .jq-selectbox li {
+  padding: 8px 0;
+  text-align: center;
+}
+.select__select .jq-selectbox li:first-child {
+  border: none;
+}
+.select__select .jq-selectbox li.selected {
+  background-color: transparent;
+  color: #C5528B;
+}
+.select__select .jq-selectbox li:hover {
+  background-color: #E5E5E5;
+}
+.select__select .jq-selectbox__dropdown {
+  margin-top: 10px;
+  padding: 16px 22px;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  font-size: 18px;
+}
+.select__select .jq-selectbox.focused .jq-selectbox__select {
+  border: none;
+}
+
+.air-datepicker {
+  width: 280px;
+  border-radius: 15px;
+  border: none;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.air-datepicker-nav {
+  border: none;
+  padding: 15px 10px;
+}
+
+.air-datepicker-nav--action path {
+  stroke: #3C3A3A;
+}
+.air-datepicker-nav--action[data-action=prev] {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+}
+.air-datepicker-nav--action[data-action=next] {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.air-datepicker-nav--title {
+  font-size: 24px;
+  color: #000;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.air-datepicker-nav--title i {
+  color: #000;
+}
+
+.air-datepicker--content {
+  padding: 10px 15px 15px;
+}
+
+.air-datepicker-body--day-names {
+  margin: 8px 0 10px;
+}
+
+.air-datepicker-body--day-name {
+  font-size: 12px;
+  color: #000;
+}
+
+.air-datepicker-body--cells {
+  border-top: 1px solid #DFDFDF;
+  border-left: 1px solid #DFDFDF;
+}
+
+.air-datepicker-cell {
+  border-radius: 0;
+  border-right: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+  font-size: 14px;
+  color: #000;
+}
+.air-datepicker-cell.-selected- {
+  background: #C5528B;
+}
+.air-datepicker-cell.-selected-:hover {
+  background: #C5528B;
+}
+.air-datepicker-cell.-current- {
+  color: #C5528B;
+}
+.air-datepicker-cell.-current-:hover {
+  color: #C5528B;
+}
+.air-datepicker-cell.-day-.-other-month- {
+  color: #747474;
+}
+.air-datepicker-cell.-day-.-other-month-.-disabled- {
+  color: var(--adp-color-disabled);
+}
+.air-datepicker-cell.-day-.-other-month-:hover {
+  color: #747474;
+}
+.air-datepicker-cell.-selected-.-current- {
+  background: #C5528B;
+}
+.air-datepicker-cell.-selected-.-current-:hover {
+  color: #fff;
+}
+
 .header__top {
   height: 43px;
   background-color: #FFD4DE;
@@ -8126,7 +8297,7 @@ body.lock {
 }
 
 .order {
-  padding: 20px 0 60px;
+  padding: 20px 0;
 }
 .order__tabs {
   margin-bottom: 9px;
@@ -8231,6 +8402,9 @@ body.lock {
 }
 .order__arrange {
   margin-bottom: 20px;
+}
+.order__subtitle {
+  margin-bottom: 18px;
 }
 
 .approval__input {

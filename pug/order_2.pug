@@ -1,0 +1,67 @@
+extends blocks/base.pug
+
+block title 
+	title Оформление заказа (шаг 2)
+
+block content
+
+	.page
+
+		include blocks/header_inner.pug
+		+header_inner('Оформление заказа')
+		
+		.content
+			
+			// order
+			.order
+				.container
+					form(action="#") 
+						.order__subtitle Уточните детали доставки
+						.order__tabs
+							.row.gy-1
+								.col-12
+									.input 
+										.input__label Имя 
+											span &#42;
+										.input__input 
+											input(type="text") 
+								.col-12
+									.input
+										.input__label Дата доставки
+											span &#42;
+										.input__input 
+											input(type="text" autocomplete="off")#airDatepicker 
+											label(for="airDatepicker").input__calendar 
+												img(src="img/calendar.svg", alt="")
+								.col-12
+									.select 
+										.select__label Время доставки
+											span &#42;
+										.select__select 
+											select(name="#") 
+												option(value="#") в ближайшее время
+												option(value="#") 12:00-13:00
+												option(value="#") 13:00-14:00
+												option(value="#") 14:00-15:00
+												option(value="#") 15:00-16:00
+												option(value="#") 16:00-17:00
+												option(value="#") 17:00-18:00
+												option(value="#") 18:00-19:00
+												option(value="#") 19:00-20:00
+								.col-12
+									.input
+										.input__label Дополнительная информация: 
+										.input__input 
+											textarea
+						.row.mt-5
+							.col-6 
+								.order__progress 
+									.order__progress-step 2/3
+									.order__progress-line 
+										span(style="width: 66.66%")
+							.col-6 
+								.order__buttons 
+									a(href="#").btn.btn--small.btn--purple ДАЛЕЕ
+			//	/order
+			
+		include blocks/footer.pug

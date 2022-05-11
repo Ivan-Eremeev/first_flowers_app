@@ -162,6 +162,7 @@ $(document).ready(function () {
 	// airDatepicker | Календарь
 	let minDate = new Date();
 	new AirDatepicker('#airDatepicker', {
+		isMobile: true,
 		navTitles: {
 			days: 'MMMM yyyy'
 		},
@@ -171,6 +172,7 @@ $(document).ready(function () {
 		}
 	})
 
+	// Formstyler Select
 	$('select').styler();
 
 	// Выпадайки при клике по кнопке
