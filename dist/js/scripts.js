@@ -1,37 +1,10 @@
-//  Ivan Eremeev - 2020
+//  Ivan Eremeev - 2022
 //  Telegram: IvanMessage
 //  Email: ivan.frontcoder@gmail.com
 
 $(document).ready(function () {
 
-	// Запрет перехода по ссылкам с хэшем
-	$('a[href="#"]').click(function (e) {
-		e.preventDefault();
-	});
-
 	// Swiper
-	const sliderHome = new Swiper('#sliderHome', {
-		spaceBetween: 20,
-		loop: true,
-		autoplay: true,
-		pagination: {
-			el: '.slider__pagination',
-			clickable: true,
-		},
-		on: {
-			init() {
-				this.el.addEventListener('mouseenter', () => {
-					this.autoplay.stop();
-				});
-
-				this.el.addEventListener('mouseleave', () => {
-					this.autoplay.start();
-				});
-			}
-		},
-
-	});
-
 	const sliderProductPage = new Swiper('#sliderProductPage', {
 		spaceBetween: 10,
 		pagination: {
@@ -39,49 +12,6 @@ $(document).ready(function () {
 			clickable: true,
 		},
 	});
-
-	// // Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-	// function stikyMenu() {
-	// 	const header = document.querySelector('#header');
-	// 	const content = document.querySelector('.content');
-	// 	let width = window.clientWidth;
-
-	// 	if (header) {
-	// 		setPaddingTopFromHeader();
-
-	// 		setNavbarPosition();
-
-	// 		window.addEventListener('scroll', () => {
-	// 			setNavbarPosition();
-	// 		});
-	// 	}
-
-	// 	// window.addEventListener('resize', (e) => {
-	// 	// 	if (e.target.innerWidth !== width) {
-	// 	// 		width = e.target.innerWidth;
-	// 	// 		setPaddingTopFromHeader();
-	// 	// 	}
-	// 	// })
-
-	// 	function setNavbarPosition() {
-
-	// 		if (window.scrollY > header.clientTop + 300) {
-	// 			header.classList.add('stiky');
-	// 		} else if (window.scrollY <= header.clientTop + 1) {
-	// 			header.classList.remove('stiky');
-	// 		}
-
-	// 	}
-
-	// 	function setPaddingTopFromHeader() {
-	// 		setTimeout(() => {
-	// 			content.setAttribute('style', `padding-top:${header.clientHeight
-	// 				}px;`);
-	// 		}, 500);
-	// 	}
-
-	// }
-	// stikyMenu();
 
 	// Изменение количества товара (плюс минус)
 	function counter(block) {
@@ -206,7 +136,6 @@ $(document).ready(function () {
 	function placeholderSearch() {
 		const input = $('#search');
 		const placeholder = $('.header__search-placeholder');
-		console.log(input);
 		input.on('input', function () {
 			if (!input.val() == '') {
 				placeholder.addClass('hide');

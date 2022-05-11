@@ -40,15 +40,9 @@
         right: 20px;
         transform: translate(0,-50%);
       }
-      // ul {
-      //   display: flex;
-      //   flex-direction: column;
-      //   align-items: center;
-      // }
       li {
         padding: 8px 0;
         text-align: center;
-        // border-bottom: 1px solid #C4C4C4;
         &:first-child {
           border: none;
         }

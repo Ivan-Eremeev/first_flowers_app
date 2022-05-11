@@ -111,8 +111,8 @@ body {
     color: $purple;
 
     &:hover {
-      background-color: $purple;
-      color: #fff;
+      // background-color: $purple;
+      color: $purple;
     }
   }
 
@@ -121,7 +121,7 @@ body {
     color: $white;
 
     &:hover {
-      box-shadow: $box_shadow;
+      // box-shadow: $box_shadow;
       color: $white;
     }
   }
@@ -132,8 +132,8 @@ body {
     border-color: $text;
 
     &:hover {
-      color: $purple;
-      border-color: $purple;
+      color: $text;
+      // border-color: $purple;
     }
   }
 
